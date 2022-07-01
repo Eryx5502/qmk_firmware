@@ -17,6 +17,7 @@
 #pragma once
 
 #ifdef RGBLIGHT_ENABLE
+#    define RGBLIGHT_SLEEP
 #    define RGBLIGHT_ANIMATIONS
 #    define RGBLIGHT_HUE_STEP 8
 #    define RGBLIGHT_SAT_STEP 8
@@ -27,4 +28,4 @@
 // Lets you roll mod-tap keys
 #define IGNORE_MOD_TAP_INTERRUPT
 // For encoder not to skip 1 click
-// #define ENCODER_RESOLUTION 2
+#define ENCODER_RESOLUTION 2

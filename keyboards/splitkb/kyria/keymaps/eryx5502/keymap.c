@@ -37,8 +37,6 @@ enum layers {
 #define ALT_ENT MT(MOD_LALT, KC_ENT)
 #define SFT_SPC MT(MOD_LSFT, KC_SPC)
 #define SFT_ENT MT(MOD_LSFT, KC_ENT)
-#define ALT_BSPC MT(MOD_LALT, KC_BSPC)
-#define WIN_BSPC MT(MOD_LGUI, KC_BSPC)
 
 #define CLOSE LALT(KC_F4)
 #define RUNNER LALT(KC_SPC)
@@ -58,22 +56,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
  * Base Layer: QWERTY
  *
- * ,-------------------------------------------.                              ,---------------------------------------.
- * |  Tab  |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  |  /  |
- * |-------+------+------+------+------+------|                              |------+------+------+------+------+-----|
- * |  Esc  |   A  |   S  |   D  |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |  ´  |
- * |-------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+-----|
- * |  NAV  |   Z  |   X  |   C  |   V  |   B  |      |      |  |      |      |   N  |   M  | ,  < | . >  | /  ? | LOL |
- * `---------------------+------+------+------| BSPC | ENTR |  | BSPC + SPC  +------+------+------+-------------------'
- *                       | DESKS| LCTL |  NUM |  /   |  /   |  |  /   |  /   |  SYM | LGUI | APPS |
- *                       | ENC1 |      |      | WIN  | ALT  |  | ALT  | SFT  |      |      | ENC2 |
- *                       `----------------------------------'  `----------------------------------'
+ * ,-------------------------------------------.                             ,---------------------------------------.
+ * |  Esc  |   Q  |   W  |   E  |   R  |   T  |                             |   Y  |   U  |   I  |   O  |   P  |  Bs |
+ * |-------+------+------+------+------+------|                             |------+------+------+------+------+-----|
+ * |  Tab  |   A  |   S  |   D  |   F  |   G  |                             |   H  |   J  |   K  |   L  |   Ñ  |  ´  |
+ * |-------+------+------+------+------+------+------------.  ,-------------+------+------+------+------+------+-----|
+ * |  NAV  |   Z  |   X  |   C  |   V  |   B  |     |      |  |      |      |   N  |   M  | ,  < | . >  | /  ? | LOL |
+ * `---------------------+------+------+------| SPC | ENTR |  | ENTR + SPC  +------+------+------+-------------------'
+ *                       | DESKS| LCTL |  NUM |  /  |  /   |  |  /   |  /   |  SYM | LGUI | APPS |
+ *                       | ENC1 |      |      | SFT | ALT  |  | ALT  | SFT  |      |      | ENC2 |
+ *                       `---------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
-     KC_TAB , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                           KC_Y ,   KC_U ,  KC_I ,   KC_O ,  KC_P , ES_SLSH,
-     KC_ESC , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                           KC_H ,   KC_J ,  KC_K ,   KC_L ,ES_NTIL, ES_ACUT,
-     NAV    , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , XXXXXXX  , XXXXXXX,     XXXXXXX, XXXXXXX, KC_N ,   KC_M ,KC_COMM, KC_DOT ,ES_MINS,   LOL  ,
-                               RUNNER , KC_LCTL,   NUM  , WIN_BSPC , ALT_ENT,    ALT_BSPC, SFT_SPC, SYM  , KC_LGUI, CLOSE
+     KC_ESC , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                          KC_Y ,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_BSPC,
+     KC_TAB , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                          KC_H ,   KC_J ,  KC_K ,   KC_L ,ES_NTIL, ES_ACUT,
+     KC_LCTL, KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , XXXXXXX , XXXXXXX,     XXXXXXX, XXXXXXX, KC_N ,   KC_M ,KC_COMM, KC_DOT ,ES_MINS,   LOL  ,
+                               RUNNER ,   NAV  ,   NUM  , SFT_SPC , ALT_ENT,     ALT_ENT, SFT_SPC, SYM  , KC_LGUI, CLOSE
     ),
 
 /*
@@ -91,10 +89,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                       `----------------------------------'  `----------------------------------'
  */
     [_LOL] = LAYOUT(
-     KC_TAB , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                           KC_Y ,   KC_U ,  KC_I ,   KC_O ,  KC_P , ES_SLSH,
-     KC_ESC , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                           KC_H ,   KC_J ,  KC_K ,   KC_L ,ES_NTIL, ES_ACUT,
+     KC_ESC , KC_1 ,  KC_2   ,  KC_3  ,   KC_4 ,   KC_P ,                                           KC_Y ,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_BSPC,
+     KC_TAB , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                           KC_H ,   KC_J ,  KC_K ,   KC_L ,ES_NTIL, ES_ACUT,
       KC_Z  , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_B , XXXXXXX  , XXXXXXX,     XXXXXXX, XXXXXXX, KC_N ,   KC_M ,KC_COMM, KC_DOT ,ES_MINS,  QWERTY,
-                               KC_MUTE, KC_LALT, KC_LCTL,  KC_SPC  , SFT_ENT,     SFT_SPC, ALT_SPC, SYM  , KC_LGUI, CLOSE
+                               KC_MUTE, KC_LALT, KC_LCTL,  KC_SPC  , SFT_ENT,     ALT_ENT, SFT_SPC, SYM  , KC_LGUI, CLOSE
     ),
 
 /*
@@ -164,9 +162,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Adjust Layer: Default layer settings, RGB
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |      |      |QWERTY|      |      |                              |      |      |      |      |      |        |
+ * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |                              | TOG  | SAI  | HUI  | VAI  | MOD  |        |
+ * |        |      |      |      |QWERTY|      |                              | TOG  | SAI  | HUI  | VAI  | MOD  |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |      |  |      |      |      | SAD  | HUD  | VAD  | RMOD |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
@@ -175,8 +173,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_ADJUST] = LAYOUT(
-      _______, _______, _______, QWERTY , _______, _______,                                    _______, _______, _______, _______,  _______, _______,
-      _______, _______, _______, _______, _______, _______,                                    RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI,  RGB_MOD, _______,
+      _______, _______, _______, _______, _______, _______,                                    _______, _______, _______, _______,  _______, _______,
+      _______, _______, _______, _______, QWERTY , _______,                                    RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI,  RGB_MOD, _______,
       _______, _______, _______, _______, _______, _______,_______, _______, _______, _______, _______, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD, _______,
                                  _______, _______, _______,_______, _______, _______, _______, _______, _______, _______
     ),
@@ -264,18 +262,21 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
       } else if (index == 1) {
           alt_tab_encoder(clockwise);
       }
+      break;
     case _LOL:
       if (index == 0) {
         volume_encoder(clockwise);
       } else if (index == 1) {
         alt_tab_encoder(clockwise);
       }
+      break;
     case _NAV:
       if (index == 0) {
         volume_encoder(clockwise);
       } else if (index == 1) {
         music_encoder(clockwise);
       }
+      break;
   }
   return false;
 }
@@ -283,7 +284,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 
 void matrix_scan_user(void) {
   if (is_alt_tab_active) {
-    if (timer_elapsed(alt_tab_timer) > 900) {
+    if (timer_elapsed(alt_tab_timer) > 300) {
       unregister_code(KC_LALT);
       is_alt_tab_active = false;
     }
