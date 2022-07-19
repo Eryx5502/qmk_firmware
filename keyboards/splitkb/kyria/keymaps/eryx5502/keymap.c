@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_GRV , ES_BULT, ES_DQUO, ES_EURO,  ES_DLR, ES_PERC,                                     ES_AMPR, ES_LCBR, ES_RCBR, ES_HASH, ES_SLSH, ES_BSLS,
       _______,   ES_AT, ES_QUOT, ES_LABK, ES_RABK, ES_CIRC,                                      ES_EQL, ES_LPRN, ES_RPRN, ES_EXLM, ES_QUES, ES_TILD,
       _______,  ES_NOT, ES_MINS, ES_PLUS, ES_ASTR,  ES_GRV, _______, _______, _______, _______, ES_PIPE, ES_LBRC, ES_RBRC, ES_IEXL, ES_IQUE, ES_DIAE,
-                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, CLOSE
     ),
 
 /*
@@ -182,7 +182,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______,   _______,   _______,   _______,   _______, _______,                                    LCAG(KC_LEFT),LCAG(KC_DOWN),LCAG(KC_UP),LCAG(KC_RGHT),     _______, _______,
       _______,LCAG(KC_0),LCAG(KC_1),LCAG(KC_2),LCAG(KC_3), _______,                                       G(KC_LEFT),   G(KC_DOWN),   G(KC_UP),   G(KC_RGHT),LSG(ES_NTIL), _______,
       _______,   G(KC_1),   G(KC_2),   G(KC_3),   G(KC_4), _______, _______, _______, _______, _______,      _______,      _______,     _______,      _______,     _______, _______,
-                                       _______,   _______, _______, _______, _______, _______, _______,      _______,      _______,     KC_MUTE
+                                       _______,   _______, _______, _______, _______, _______, _______,      _______,      _______,     KC_MPLY
     ),
 
 /*
