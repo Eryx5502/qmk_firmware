@@ -48,7 +48,7 @@ enum custom_keycodes {
 // #define APPS RALT(KC_TAB)
 #define CUT LCTL(KC_X)
 #define COPY LCTL(KC_C)
-#define PASTE LCTL(KC_P)
+#define PASTE LCTL(KC_V)
 #define SEARCH LCTL(KC_F)
 #define C_RGHT LCTL(KC_RGHT)
 #define C_LEFT LCTL(KC_LEFT)
@@ -149,9 +149,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * |        |      |      |      | IMPR |      |                              |  C_← | PgDn | PgUp |  C_→  | INICIO| DEL  |
  * |--------+------+------+------+------+------|                              |------+------+------+-------+-------+------|
- * | ADJUST |      |  CUT | COPY | PASTE|SEARCH|                              |  ←   |   ↓  |   ↑  |   →   |  FIN  | INS  |
+ * | ADJUST |      | LALT | LWIN | LCTL |      |                              |  ←   |   ↓  |   ↑  |   →   |  FIN  | INS  |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+-------+-------+------|
- * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |       |       |      |
+ * |        |      |  CUT | COPY | PASTE|SEARCH|      |      |  |      |      |      |      |      |       |       |      |
  * `----------------------+------+------+------+------|------|  |------|------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |      |      | Music|
  *                        |      |      |      |      |      |  |      |      |      |      | ENC2 |
@@ -159,7 +159,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_NAV] = LAYOUT(
       _______, _______, _______, _______, KC_PSCR, _______,                                      C_LEFT, KC_PGDN, KC_PGUP,  C_RGHT, KC_HOME,  KC_DEL,
-       ADJUST, _______,MOD_LALT,MOD_LGUI,MOD_LCTL, _______,                                     KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT,  KC_END,  KC_INS,
+       ADJUST, _______, KC_LALT, KC_LGUI, KC_LCTL, _______,                                     KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT,  KC_END,  KC_INS,
       _______, _______,   CUT  ,   COPY ,  PASTE ,  SEARCH, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MPLY
     ),
@@ -179,10 +179,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_SNAP] = LAYOUT(
-      _______,   _______,   _______,   _______,   _______, _______,                                    LCAG(KC_LEFT),LCAG(KC_DOWN),LCAG(KC_UP),LCAG(KC_RGHT),     _______, _______,
-      _______,LCAG(KC_0),LCAG(KC_1),LCAG(KC_2),LCAG(KC_3), _______,                                       G(KC_LEFT),   G(KC_DOWN),   G(KC_UP),   G(KC_RGHT),LSG(ES_NTIL), _______,
-      _______,   G(KC_1),   G(KC_2),   G(KC_3),   G(KC_4), _______, _______, _______, _______, _______,      _______,      _______,     _______,      _______,     _______, _______,
-                                       _______,   _______, _______, _______, _______, _______, _______,      _______,      _______,     KC_MPLY
+      _______,   _______,   _______,   _______,   _______,   _______,                                        LCAG(KC_LEFT),LCAG(KC_DOWN),LCAG(KC_UP),LCAG(KC_RGHT),     _______, _______,
+      _______,LCAG(KC_0),LCAG(KC_1),LCAG(KC_2),LCAG(KC_3),LCAG(KC_4),                                           G(KC_LEFT),   G(KC_DOWN),   G(KC_UP),   G(KC_RGHT),LSG(ES_NTIL), _______,
+      _______,   G(KC_1),   G(KC_2),   G(KC_3),   G(KC_4),   G(KC_5), _______, _______,     _______, _______,      _______,      _______,     _______,      _______,     _______, _______,
+                                       _______,   _______,   _______, _______, _______,     _______, _______,      _______,      _______,     KC_MPLY
     ),
 
 /*
