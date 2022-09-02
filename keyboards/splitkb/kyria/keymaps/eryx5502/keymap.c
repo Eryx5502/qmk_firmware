@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |-------+------+------+------+------+------|                             |------+------+------+------+------+-----|
  * |  Tab  |   A  |S/ALT |D/WIN |F/CTRL|   G  |                             |   H  |J/CTRL|K/WIN |L/ALT |   Ñ  |  ´  |
  * |-------+------+------+------+------+------+------------.  ,-------------+------+------+------+------+------+-----|
- * | Runner|   Z  |   X  |   C  |   V  |   B  |     |      |  |      |      |   N  |   M  | ,  < | . >  | /  ? | LOL |
+ * | Runner|   Z  |   X  |   C  |   V  |   B  |     |      |  |      |      |   N  |   M  | ,  < | . >  | /  ? | Caps|
  * `---------------------+------+------+------| SPC | ENTR |  | RSFT | SPC  +------+------+------+-------------------'
  *                       | DESKS|  NAV |  NUM |     |  /   |  |      |      |  SYM | SNAP |  Vol |
  *                       | ENC1 |      |      |     | SFT  |  |      |      |      |      | ENC2 |
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
      KC_ESC, KC_Q ,    KC_W   ,    KC_E   ,    KC_R   ,   KC_T ,                                          KC_Y ,    KC_U   ,    KC_I   ,     KC_O  ,  KC_P , KC_BSPC,
      KC_TAB, KC_A ,ALT_T(KC_S),GUI_T(KC_D),CTL_T(KC_F),   KC_G ,                                          KC_H ,CTL_T(KC_J),GUI_T(KC_K),ALT_T(KC_L),ES_NTIL, ES_ACUT,
-     RUNNER, KC_Z ,    KC_X   ,    KC_C   ,   KC_V    ,   KC_B , XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, KC_N ,    KC_M   ,   KC_COMM  ,   KC_DOT  ,ES_MINS,   LOL  ,
+     RUNNER, KC_Z ,    KC_X   ,    KC_C   ,   KC_V    ,   KC_B , XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, KC_N ,    KC_M   ,   KC_COMM  ,   KC_DOT  ,ES_MINS, KC_CAPS,
                                    APPS   ,   NAV     ,   NUM  ,  KC_SPC, SFT_ENT,     KC_RSFT,  KC_SPC, SYM  ,    SNAP   ,   KC_MUTE
     ),
 
@@ -112,14 +112,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |        |  ¬   |   -  |  +   |  *   |  `   |      |      |  |      |      |   |  |  [   |  ]   |  ¡   |  ¿   |   ¨    |
  * `----------------------+------+------+------+------|------|  |------|------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |      |      |      |      |
- *                        |      |      |      |      |      |  |      |      |      |      |      |
+ *                        |CLOSE |      |      |      |      |  |      |      |      |      | LOL  |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_SYM] = LAYOUT(
       KC_GRV , ES_BULT, ES_DQUO, ES_EURO,  ES_DLR, ES_PERC,                                     ES_AMPR, ES_LCBR, ES_RCBR, ES_HASH, ES_SLSH, ES_BSLS,
       _______,   ES_AT, ES_QUOT, ES_LABK, ES_RABK, ES_CIRC,                                      ES_EQL, ES_LPRN, ES_RPRN, ES_EXLM, ES_QUES, ES_TILD,
       _______,  ES_NOT, ES_MINS, ES_PLUS, ES_ASTR,  ES_GRV, _______, _______, _______, _______, ES_PIPE, ES_LBRC, ES_RBRC, ES_IEXL, ES_IQUE, ES_DIAE,
-                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, CLOSE
+                                   CLOSE, _______, _______, _______, _______, _______, _______, _______, _______, LOL
     ),
 
 /*
