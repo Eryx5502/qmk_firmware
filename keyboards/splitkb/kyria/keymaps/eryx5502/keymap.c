@@ -138,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_NUM] = LAYOUT(
       _______,  KC_F1 ,    KC_F2   ,    KC_F3   ,    KC_F4   , _______,                                     ES_SLSH,    ES_7   ,     ES_8  ,     ES_9  , ES_MINS, _______,
-      _______,  KC_F5 ,ALT_T(KC_F6),WIN_T(KC_F7),CTL_T(KC_F8), _______,                                     ES_ASTR,ALT_T(ES_4),WIN_T(ES_5),CTL_T(ES_6), ES_PLUS, ES_COMM,
+      _______,  KC_F5 ,ALT_T(KC_F6),WIN_T(KC_F7),CTL_T(KC_F8), _______,                                     ES_ASTR,CTL_T(ES_4),WIN_T(ES_5),ALT_T(ES_6), ES_PLUS, ES_COMM,
       _______,  KC_F9 ,    KC_F10  ,    KC_F11  ,    KC_F12  , _______, _______, _______, _______, _______,  ES_EQL,    ES_1   ,     ES_2  ,     ES_3  ,  ES_DOT, KC_PENT,
                                          _______,     _______, _______, _______, _______, _______, _______,    ES_0,    _______,    _______
     ),
